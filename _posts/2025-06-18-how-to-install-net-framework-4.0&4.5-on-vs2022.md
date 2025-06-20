@@ -2,7 +2,7 @@
 title: Visual Studio 2022 安装 .NET Framework 4.0&4.5的方法
 date: 2025-06-18 22:30:00 -0400
 categories: [工具, IDE]
-tags: [工具]     # TAG names should always be lowercase
+tags: [tools, ide]     # TAG names should always be lowercase
 ---
 
 ## 问题描述
