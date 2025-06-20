@@ -2,10 +2,10 @@
 title: Visual Studio 2022 安装 .NET Framework 4.0&4.5的方法
 date: 2025-06-18 22:30:00 -0400
 categories: [工具, IDE]
-tags: [tools]     # TAG names should always be lowercase
+tags: [工具]     # TAG names should always be lowercase
 ---
 
-## 前言
+## 问题描述
 
 为了使用最新的AI技术，把Visual Studio更新到了2022，然后就打不开.NET Framework4.0的旧项目了。
 

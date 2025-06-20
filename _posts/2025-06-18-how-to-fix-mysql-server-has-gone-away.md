@@ -2,21 +2,28 @@
 title: 如何修复主机服务器出现的MySQL server has gone away
 date: 2025-06-18 11:30:00 -0400
 categories: [服务器, 数据库]
-tags: [mysql]     # TAG names should always be lowercase
+tags: [server, mysql]     # TAG names should always be lowercase
 ---
 
-MySQL server has gone away 是一个非常常见的 MySQL 报错，尤其是在共享主机或类似 GoDaddy Web Hosting 这种托管环境中。  
+## 问题描述
+
+最近，一个旧的PHP项目总是出现 MySQL server has gone away的报错，这是一个非常常见的 MySQL 报错，尤其是在共享主机或类似 GoDaddy Web Hosting 这种托管环境中。  
 
 这个错误的常见原因是：查询时间太长，导致MySQL连接超时。
 
+## 解决方法
+
 在网上也许你会看到其它教程推荐修改MySQL配置，  
 例如：修改my.cnf 或 my.ini中的`wait_timeout`（单位 秒）
+
 ```ini
 wait_timeout = 600
 ```
+
 但是，修改`wait_timeout`（空闲连接超时时间）治标不治本，也不适合主机服务器（一般`wait_timeout`为60秒，也没有权限修改）
 
 所以，解决MySQL server has gone away的问题，需要从这两点出发：
+
 1. 优化SQL语句，减少查询时间 （后续补充SQL语句优化教程）
 2. 在出现连接错误时，尝试进行一次重连  
    代码示例：（语言PHP，用mysqli面向过程写法，可自行修改为面向对象/PDO）
@@ -69,6 +76,6 @@ wait_timeout = 600
      }
   ?>
 ```
+
 `mysqli_ping`的开销很低，所以不必担心重复使用。  
 如果一段程序内多次执行查询函数，觉得`mysqli_ping`有影响的话，可以考虑将`$db = get_db_connection()`从`db_query`内提出来，只在失败时强制重连时使用。
-
