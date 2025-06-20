@@ -1,6 +1,7 @@
 ---
 title: Windows 服务器 IIS 日志自动清理方案
 date: 2025-06-19 21:50:00 -0400
+description: Windows 服务器 IIS 默认每天都会生成日志文件，如果网站的流量比较大，每天的日志文件可能会达到上百兆，这些日志文件如果不定时清理，日积月累便会严重地占用服务器磁盘空间。
 categories: [服务器, IIS]
 tags: [server, windows iis]     # TAG names should always be lowercase
 ---

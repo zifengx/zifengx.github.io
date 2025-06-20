@@ -1,6 +1,7 @@
 ---
 title: Visual Studio 2022 安装 .NET Framework 4.0&4.5的方法
 date: 2025-06-18 22:30:00 -0400
+description: 为了使用最新的AI技术，把Visual Studio更新到了2022，然后就打不开.NET Framework4.0的旧项目了。因为VS2022不再原生支持.NET Framework 4.0&4.5, 支持的最低.NET Framework版本是4.6.2，所以需要通过一些方法来支持旧版本的项目。
 categories: [工具, IDE]
 tags: [tools, ide]     # TAG names should always be lowercase
 ---
