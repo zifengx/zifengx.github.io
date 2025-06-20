@@ -37,7 +37,7 @@ forfiles /p %log_dir% /S /M *.log /D -%bak_dat% /C "cmd /c echo 正在删除@rel
 
 ![delete iis logs](/assets/images/20250619/deleteIISlog.webp)
 
-### 3. 配置计划任务实现自动执行
+### 3. 配置服务器计划任务实现自动执行
 
 为了避免手动执行，你可以将该脚本加入系统计划任务中，定期自动执行：
 

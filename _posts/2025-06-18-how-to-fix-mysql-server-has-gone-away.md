@@ -29,52 +29,52 @@ wait_timeout = 600
    代码示例：（语言PHP，用mysqli面向过程写法，可自行修改为面向对象/PDO）
 
 ```php
-  <?php 
-    // ====== 数据库连接配置 ======
-    $db_host = 'localhost';
-    $db_user = 'your_user';
-    $db_pass = 'your_pass';
-    $db_name = 'your_db';
+<?php 
+  // ====== 数据库连接配置 ======
+  $db_host = 'localhost';
+  $db_user = 'your_user';
+  $db_pass = 'your_pass';
+  $db_name = 'your_db';
 
-    // ====== 封装连接函数 ======
-    function get_db_connection() {
-        static $db = null;
+  // ====== 封装连接函数 ======
+  function get_db_connection() {
+    static $db = null;
 
-        if ($db && mysqli_ping($db)) {
-            return $db; // 当前连接可用
-        }
-
-        // 若连接为空或失效，重新连接
-        $db = @mysqli_connect($GLOBALS['db_host'], $GLOBALS['db_user'], $GLOBALS['db_pass']);
-        if (!$db) {
-            die('Database connection failed: ' . mysqli_connect_error());
-        }
-
-        if (!@mysqli_select_db($db, $GLOBALS['db_name'])) {
-            die('Select DB failed: ' . mysqli_error($db));
-        }
-
-        return $db;
+    if ($db && mysqli_ping($db)) {
+      return $db; // 当前连接可用
     }
 
-    // ====== 执行查询函数 ======
-    function db_query($sql) {
-        $db = get_db_connection();
-        $result = @mysqli_query($db, $sql);
+    // 若连接为空或失效，重新连接
+    $db = @mysqli_connect($GLOBALS['db_host'], $GLOBALS['db_user'], $GLOBALS['db_pass']);
+    if (!$db) {
+      die('Database connection failed: ' . mysqli_connect_error());
+    }
 
-        // 若查询失败，尝试重连一次 (重点)
-        if (!$result && mysqli_errno($db) == 2006) { // 2006 = MySQL server has gone away
-            $db = get_db_connection(); // 强制重连
-            $result = @mysqli_query($db, $sql);
-        }
+    if (!@mysqli_select_db($db, $GLOBALS['db_name'])) {
+      die('Select DB failed: ' . mysqli_error($db));
+    }
 
-        if (!$result) {
-            error_log("SQL Failed: " . mysqli_error($db));
-        }
+    return $db;
+  }
 
-        return $result;
-     }
-  ?>
+  // ====== 执行查询函数 ======
+  function db_query($sql) {
+    $db = get_db_connection();
+    $result = @mysqli_query($db, $sql);
+
+    // 若查询失败，尝试重连一次 (重点)
+    if (!$result && mysqli_errno($db) == 2006) { // 2006 = MySQL server has gone away
+      $db = get_db_connection(); // 强制重连
+      $result = @mysqli_query($db, $sql);
+    }
+
+    if (!$result) {
+      error_log("SQL Failed: " . mysqli_error($db));
+    }
+
+    return $result;
+  }
+?>
 ```
 
 `mysqli_ping`的开销很低，所以不必担心重复使用。  
