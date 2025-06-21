@@ -2,8 +2,8 @@
 title: 什么是 AI Agent（智能体）？
 date: 2025-06-20 22:30:00 -0400
 description: AI Agent（智能体）是指一种能够自主感知环境、做出决策并采取行动的人工智能系统。简单来说，AI Agent 就像一个“虚拟小助手”，它能根据外部信息自动完成任务。
-categories: [人工智能, 智能体]
-tags: [AI, Agent]
+categories: [科普, 人工智能]
+tags: [knowledge, AI, Agent]
 ---
 
 AI Agent（智能体）是指一种能够自主感知环境、做出决策并采取行动的人工智能系统。简单来说，AI Agent 就像一个“虚拟小助手”，它能根据外部信息自动完成任务。

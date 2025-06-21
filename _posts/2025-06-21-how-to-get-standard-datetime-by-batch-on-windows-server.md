@@ -1,5 +1,5 @@
 ---
-title: Windows Server 批处理脚本获取当前系统标准化日期时间（适配多语言/多地区）
+title: 如何使用Batch在Windows Server获取当前系统标准化日期时间（适配多语言/多地区）
 date: 2025-06-21 13:50:00 -0400
 categories: [服务器, 脚本]
 tags: [server, bat, windows]
@@ -13,7 +13,6 @@ tags: [server, bat, windows]
 - `2008-07-29 星期二`
 - `07/29/2008 Tue`
 - `Tue 07/29/2008`
-- 甚至还有其它语言环境下的各种格式
 
 ## 为什么不能直接用 `%date%` 或 `date` 命令？
 
