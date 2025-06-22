@@ -2,8 +2,8 @@
 title: 什么是GS1-128, 一篇文章讲明白
 date: 2025-06-21 14:30:00 -0400
 description: 之前在物流公司做开发，公司打算对接USPS EVS，需要根据USPS的标准自画物流面单。制作标签问题不大（用html实现标签样式，然后用html转pdf），但是其中条码部分怎么都搞不出来，那时候才知道原来条形码不止有Code 128，还细分很多种类。
-categories: [科普, 条码]
-tags: [knowledge, barcode, gs1-128, usps]
+categories: [知识, 条形码]
+tags: [barcode, gs1-128, usps] # TAG names should always be lowercase
 ---
 
 之前在物流公司做开发，公司打算对接[USPS EVS](https://postalpro.usps.com/shipping/evs)，需要根据[USPS的标准](https://postalpro.usps.com/node/326)自画物流面单。制作标签问题不大（用html实现标签样式，然后用html转pdf），但是其中条码部分怎么都搞不出来，那时候才知道原来条形码不止有Code 128，还细分很多种类。USPS的条码叫[Intelligent Mail® Package Barcode (IMpb)](https://postalpro.usps.com/shipping/impb)，用的GS1-128格式，当时被GS1, AI, FNC1等概念搞得一头雾水，还好最后冲破重重险阻做出条码，出色完成任务。
