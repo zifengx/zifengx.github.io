@@ -6,7 +6,7 @@ categories: [知识, 条形码]
 tags: [barcode, gs1-128, usps] # TAG names should always be lowercase
 ---
 
-之前在物流公司做开发，公司打算对接[USPS EVS](https://postalpro.usps.com/shipping/evs)，需要根据[USPS的标准](https://postalpro.usps.com/node/326)自画物流面单。制作标签问题不大（用html实现标签样式，然后用html转pdf），但是其中条码部分怎么都搞不出来，那时候才知道原来条形码不止有Code 128，还细分很多种类。USPS的条码叫[Intelligent Mail® Package Barcode (IMpb)](https://postalpro.usps.com/shipping/impb)，用的GS1-128格式，当时被GS1, AI, FNC1等概念搞得一头雾水，还好最后冲破重重险阻做出条码，出色完成任务。
+之前在国际物流公司做开发，公司打算对接[USPS EVS](https://postalpro.usps.com/shipping/evs)，需要根据[USPS的标准](https://postalpro.usps.com/node/326)自画物流面单。制作标签问题不大（用html实现标签样式，然后用html转pdf），但是其中条码部分怎么都搞不出来，那时候才知道原来条形码不止有Code 128，还细分很多种类。USPS的条码叫[Intelligent Mail® Package Barcode (IMpb)](https://postalpro.usps.com/shipping/impb)，用的GS1-128格式，当时被GS1, AI, FNC1等概念搞得一头雾水，还好最后冲破重重险阻做出条码，出色完成任务。
 
 今天，就用这篇文章帮大家搞清楚GS1-128, AI, FNC1等概念，希望遇到相同问题的小伙伴能够顺利解决问题！
 
@@ -38,7 +38,7 @@ GS1-128 与普通 Code 128 的主要区别如下：
 
 GS1-128 条码是结构化的，严格遵循以下格式：
 
-```
+```plaintext
 起始符 (Start A/B/C) + FNC1 + [AI+数据字段]... + 校验符 + 停止符
 ```
 
@@ -56,13 +56,13 @@ GS1-128 条码是结构化的，严格遵循以下格式：
 
 例如，一个包含 GTIN 和批次号的条码，其内容可能为：
 
-```
+```plaintext
 FNC1 01 09501101530002 FNC1 10 ABC123
 ```
 
 在人类可读格式中通常显示为：
 
-```
+```plaintext
 (01)09501101530002(10)ABC123
 ```
 
@@ -70,7 +70,7 @@ FNC1 01 09501101530002 FNC1 10 ABC123
 
 所以，解码后，输出的数据是：
 
-```
+```plaintext
 0109501101530002[GS]10ABC123
 ```
 
@@ -94,7 +94,7 @@ GS1 的“应用标识符（AI）”系统用于定义条码中每个数据字�
 
 例如，一个条码可能编码如下信息：
 
-```
+```plaintext
 (01)09501101530002(17)240930(10)BATCH-A1(21)SN202406A
 ```
 
@@ -123,7 +123,7 @@ FNC1（Function Code 1）是 GS1-128 的关键控制字符，主要有两个作�
 
 条码数据部分为：
 
-```
+```plaintext
 FNC1 01 09501101530002 FNC1 10 BATCH-ABC FNC1 17 240930
 ```
 
