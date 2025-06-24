@@ -3,7 +3,7 @@ title: 如何使用Batch在Windows Server获取当前系统标准化日期时间
 date: 2025-06-21 13:50:00 -0400
 description: 在 Windows 批处理脚本中，获取当前系统日期和时间看似简单，实际上却暗藏“陷阱”。不同语言、地区的操作系统，%date% 和 date 命令的输出格式都可能不同，导致直接字符串截取的方法不具备通用性。
 categories: [服务器, 运维]
-tags: [knowledge, server, windows, batch] # TAG names should always be lowercase
+tags: [windows server, batch] # TAG names should always be lowercase
 ---
 
 在 Windows 批处理脚本中，获取当前系统日期和时间看似简单，实际上却暗藏“陷阱”。不同语言、地区的操作系统，`%date%` 和 `date` 命令的输出格式都可能不同，导致直接字符串截取的方法不具备通用性。

@@ -3,7 +3,7 @@ title: 如何使用 Web Serial API 自动连接串口设备
 date: 2025-06-22 07:30:00 -0400
 description: Web Serial API让网页可以直接访问本地串口设备，为物联网、硬件调试、设备管理等场景带来了极大便利。本文介绍如何在网页中自动识别并连接串口设备，并给出完整代码示例。
 categories: [前端, 硬件]
-tags: [frontend, web, serial] # TAG names should always be lowercase
+tags: [硬件, web serial, 串口] # TAG names should always be lowercase
 ---
 
 [Web Serial API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API) 让网页可以直接访问本地串口设备，为物联网、硬件调试、设备管理等场景带来了极大便利。本文介绍如何在网页中自动识别并连接串口设备，并给出完整代码示例。

@@ -3,7 +3,7 @@ title: 如何修复主机服务器出现的MySQL server has gone away
 date: 2025-06-18 11:30:00 -0400
 description: 最近，一个旧的PHP项目总是出现 MySQL server has gone away 的报错，经过调研，发现这是一个非常常见的 MySQL 报错，尤其是在共享主机或类似 GoDaddy Web Hosting 这种托管环境中。这个错误的本质原因是：查询时间太长，导致MySQL连接超时。
 categories: [服务器, 数据库]
-tags: [sever, database, mysql]     # TAG names should always be lowercase
+tags: [数据库，mysql]     # TAG names should always be lowercase
 ---
 
 最近，一个旧的PHP项目总是出现 MySQL server has gone away 的报错，经过调研，发现这是一个非常常见的 MySQL 报错，尤其是在共享主机或类似 GoDaddy Web Hosting 这种托管环境中。  

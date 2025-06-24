@@ -3,7 +3,7 @@ title: 什么是GS1-128, 一篇文章讲明白
 date: 2025-06-21 14:30:00 -0400
 description: 之前在物流公司做开发，公司打算对接USPS EVS，需要根据USPS的标准自画物流面单。制作标签问题不大（用html实现标签样式，然后用html转pdf），但是其中条码部分怎么都搞不出来，那时候才知道原来条形码不止有Code 128，还细分很多种类。
 categories: [知识, 条形码]
-tags: [barcode, gs1-128, usps] # TAG names should always be lowercase
+tags: [条形码, barcode, gs1-128, usps, 物流] # TAG names should always be lowercase
 ---
 
 之前在国际物流公司做开发，公司打算对接[USPS EVS](https://postalpro.usps.com/shipping/evs)，需要根据[USPS的标准](https://postalpro.usps.com/node/326)自画物流面单。制作标签问题不大（用html实现标签样式，然后用html转pdf），但是其中条码部分怎么都搞不出来，那时候才知道原来条形码不止有Code 128，还细分很多种类。USPS的条码叫[Intelligent Mail® Package Barcode (IMpb)](https://postalpro.usps.com/shipping/impb)，用的GS1-128格式，当时被GS1, AI, FNC1等概念搞得一头雾水，还好最后冲破重重险阻做出条码，出色完成任务。
@@ -143,7 +143,7 @@ GS1-128 是一个功能强大、结构清晰的条码标准，广泛用于全球
 
 ---
 
-如需生成 GS1-128 条码，可使用专业条码生成软件（如 Bartender、ZebraDesigner）或编程工具（如 python-barcode、ZXing.Net、Barcode4J 等）。  
+如需生成 GS1-128 条码，可使用专业条码生成软件（如 Bartender、ZebraDesigner）或编程工具（如 python-barcode、ZXing.Net、BarcodeLib、Barcode4J 等）。  
 
 这里推荐两个当时用的两个解析条码的网站，生成GS1-128条码后可以用来检查格式对不对。
 
