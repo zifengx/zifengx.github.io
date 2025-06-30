@@ -132,5 +132,4 @@ private async void btn_Click(object sender, EventArgs e)
 | BeginInvoke + 回调 + Invoke | ✅（推荐）        | ✅ 支持           | ✅        |
 | async/await                 | ✨ 最推荐         | ✅                | ✅        |
 
-
 WinForms 中异步操作的正确实现非常重要，不仅能提升性能，更是用户体验的保障。建议优先使用 async/await，老项目可用回调+Invoke方式，避免界面卡死和重复点击。
