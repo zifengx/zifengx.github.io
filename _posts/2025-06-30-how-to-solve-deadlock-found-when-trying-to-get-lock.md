@@ -1,7 +1,7 @@
 ---
 title: MySQL 报错 Deadlock found when trying to get lock 的原因与解决办法
 description: 在 MySQL 使用过程中有时候会遇到一个简单却需要精精校核的报错：ERROR 1213 (40001):Deadlock found when trying to get lock; try restarting transaction通常会出现在多个连接/事务并发执行定向 SQL 操作时，特别是 DELETE/UPDATE 形式的文件表操作。
-date: 2025-06-30 13:00:00 -0400
+date: 2025-06-26 13:00:00 -0400
 categories: [服务器, 数据库]
 tags: [mysql, 死锁, 错误排查, deaklock]
 ---

@@ -1,6 +1,6 @@
 ---
 title: C#生成GS1-128条码的三个方法
-date: 2025-06-23 22:30:00 -0400
+date: 2025-06-24 22:30:00 -0400
 description: 前面发了一篇介绍 GS1-128 的文章，有很多小伙伴私信来问如何生成 GS1-128，今天写一下用C#生成 GS1-128 的两个方法, 顺便也提一下最近遇到的新条码 GS1 DataMatrix 的生成方法。
 categories: [知识, 条形码]
 tags: [条形码, barcode, gs1-128, gs1-datamatrix, c#, 物流] # TAG names should always be lowercase

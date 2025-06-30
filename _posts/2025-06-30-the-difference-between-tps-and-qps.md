@@ -1,7 +1,7 @@
 ---
 title: TPS与QPS的区别详解
 description: 在系统性能评估与压测中，TPS（Transactions Per Second） 和 QPS（Queries Per Second） 是两个常被提及的概念。虽然它们看起来类似，但实际上含义、应用场景和衡量的角度都有很大不同。本文将对两者进行清晰的区分和实际应用建议。
-date: 2025-06-30 11:30:00 -0400
+date: 2025-06-28 11:30:00 -0400
 categories: [知识, 性能测试]
 tags: [tps, qps, 性能指标, 压测]
 ---

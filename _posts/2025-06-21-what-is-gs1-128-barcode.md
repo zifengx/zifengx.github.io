@@ -1,6 +1,6 @@
 ---
 title: 什么是GS1-128, 一篇文章讲明白
-date: 2025-06-21 14:30:00 -0400
+date: 2025-06-22 14:30:00 -0400
 description: 之前在物流公司做开发，公司打算对接USPS EVS，需要根据USPS的标准自画物流面单。制作标签问题不大（用html实现标签样式，然后用html转pdf），但是其中条码部分怎么都搞不出来，那时候才知道原来条形码不止有Code 128，还细分很多种类。
 categories: [知识, 条形码]
 tags: [条形码, barcode, gs1-128, usps, 物流] # TAG names should always be lowercase
