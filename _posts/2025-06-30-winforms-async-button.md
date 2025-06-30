@@ -8,8 +8,6 @@ tags: [winForms, async, 异步, C#]
 
 在 WinForms 开发中，某些操作（如网络请求、长时间计算等）可能导致界面卡顿。为提升用户体验，我们通常会将这些操作转为异步执行。本文结合早期的 BeginInvoke/EndInvoke 方式，以及现代 async/await，讲解 WinForms 按钮异步操作的最佳实践。
 
----
-
 ## 一、使用 Delegate 的 BeginInvoke 进行简单异步
 
 ```csharp
@@ -27,8 +25,6 @@ private void btn_Click(object sender, EventArgs e)
 
 > 这种方式会从线程池分配线程执行，但没有回调或结果处理。
 {: .prompt-warning }
-
----
 
 ## 二、获取结果：EndInvoke + IAsyncResult
 
@@ -75,8 +71,6 @@ else
 > 这种方式可以设置超时，但依然会阻塞当前线程。
 {: .prompt-danger }
 
----
-
 ## 三、推荐方案：回调方式 + UI 更新
 
 ```csharp
@@ -100,8 +94,6 @@ private void btn_Click(object sender, EventArgs e)
 > 重点：**UI 只能在 UI 线程中更新，需用 `Invoke`，否则会抛出 InvalidOperationException。**
 {: .prompt-info }
 
----
-
 ## 四、更现代的做法：async/await (C# 5.0+)
 
 如果你用的是 .NET Framework 4.5 及以上，推荐使用 async/await：
@@ -120,8 +112,6 @@ private async void btn_Click(object sender, EventArgs e)
 
 > 这种写法更简洁、安全，UI 不会卡顿，推荐优先使用。
 {: .prompt-info }
-
----
 
 ## 总结对比
 
