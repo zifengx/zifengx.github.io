@@ -3,7 +3,7 @@ title: WinForms 实现按钮异步的最佳实践
 description: 在 WinForms 开发中，某些操作（如网络请求、长时间计算等）可能导致界面卡顿。为提升用户体验，我们通常会将这些操作转为异步执行。本文结合早期的 BeginInvoke/EndInvoke 方式，以及现代 async/await，讲解 WinForms 按钮异步操作的最佳实践。
 date: 2025-06-29 12:00:00 -0400
 categories: [后端, 异步编程]
-tags: [winForms, async, 异步, c#]
+tags: [winforms, async, 异步, c#]
 ---
 
 在 WinForms 开发中，某些操作（如网络请求、长时间计算等）可能导致界面卡顿。为提升用户体验，我们通常会将这些操作转为异步执行。本文结合早期的 BeginInvoke/EndInvoke 方式，以及现代 async/await，讲解 WinForms 按钮异步操作的最佳实践。

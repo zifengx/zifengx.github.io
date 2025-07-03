@@ -3,7 +3,7 @@ title: 优化 MySQL 高 CPU 占用的排查与实用建议
 description: 高 CPU 占用通常由慢 SQL、连接管理不善、临时表溢出、表碎片、参数配置不合理等多因素叠加。建议定期巡检、优化 SQL、合理配置参数，并结合慢查询日志持续跟踪。
 date: 2025-07-01 01:00:00 -0400
 categories: [服务器, 数据库]
-tags: [mySQL, 性能优化, cpu]
+tags: [mysql, 性能优化, cpu]
 ---
 
 服务器 MySQL 占用 CPU 过高时，应从以下几个方面系统排查：
