@@ -53,8 +53,6 @@ module.exports = {
 };
 ```
 
----
-
 ## 🔧 二、配套库：amfe-flexible（或 lib-flexible）
 
 `amfe-flexible` 是阿里出品的适配库，会根据设备宽度自动设置 `<html>` 的 `font-size`，常与 `postcss-pxtorem` 配套使用。
@@ -111,8 +109,6 @@ import 'amfe-flexible';
 <img src="logo@1x.png" srcset="logo@2x.png 2x, logo@3x.png 3x" alt="logo" />
 ```
 
----
-
 ## 🧩 五、uniapp 中的 rpx 实现
 
 在 uniapp 中，`rpx` 是官方推荐单位，1rpx = 屏幕宽度的 1/750。
@@ -141,8 +137,6 @@ module.exports = {
   },
 };
 ```
-
----
 
 ## 🧠 总结
 
